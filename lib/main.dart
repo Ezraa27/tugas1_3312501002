@@ -125,6 +125,38 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: _resetCounter,
                 child: const Text('Reset'),
               ),
+              const SizedBox(height: 28), 
+              // kotak informasi identitas
+              Card(
+                elevation: 0,
+                color: Colors.grey.shade200,
+                margin: const EdgeInsets.symmetric(horizontal: 24),
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Nama: $nama',
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          'NIM: $nim',
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(height: 4),
+                        const Text(
+                          'Ditampilkan langsung dari kode Dart',
+                          style: TextStyle(fontSize: 12, color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
