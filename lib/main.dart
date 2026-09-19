@@ -98,13 +98,18 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               const SizedBox(height: 24),
 
-              // tombol aksi untuk mengurangi
+              // tombol aksi untuk mengurangi dan juga menambah
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   OutlinedButton(
                     onPressed: _decrementCounter,
                     child: const Text('- Kurang'),
+                  ),
+                  const SizedBox(width: 16),
+                  OutlinedButton(
+                    onPressed: _incrementCounter,
+                    child: const Text('+ Tambah'),
                   ),
                 ],
               ),
@@ -114,7 +119,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
-        tooltip: 'Increment',
+        tooltip: 'Tambah',
         child: const Icon(Icons.add),
       ),
     );
