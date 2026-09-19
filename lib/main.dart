@@ -46,6 +46,11 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() => _counter--);
   }
 
+  // untuk mereset nilai
+  void _resetCounter() {
+    setState(() => _counter = 0);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -112,6 +117,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: const Text('+ Tambah'),
                   ),
                 ],
+              ),
+              const SizedBox(height: 12),
+
+              // tombol aksi untuk mereset
+              FilledButton.tonal(
+                onPressed: _resetCounter,
+                child: const Text('Reset'),
               ),
             ],
           ),
