@@ -36,10 +36,14 @@ class _MyHomePageState extends State<MyHomePage> {
   // Variabel untuk menyimpan nilai hitungan
   int _counter = 0;
 
+  // Fungsi untuk menambah nilai
   void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+    setState(() => _counter++);
+  }
+
+  // untuk mengurangi nilai
+  void _decrementCounter() {
+    setState(() => _counter--);
   }
 
   @override
@@ -91,6 +95,18 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ],
                 ),
+              ),
+              const SizedBox(height: 24),
+
+              // tombol aksi untuk mengurangi
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  OutlinedButton(
+                    onPressed: _decrementCounter,
+                    child: const Text('- Kurang'),
+                  ),
+                ],
               ),
             ],
           ),
